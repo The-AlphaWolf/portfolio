@@ -1,5 +1,5 @@
 import TypingTerminal from "./TypingTerminal";
-import { heroTerminal, site } from "@/data/site";
+import { basePath, heroTerminal, site } from "@/data/site";
 import Image from "next/image";
 
 /** Hero — name, tagline, CTA buttons, photo placeholder, typing terminal. */
@@ -57,10 +57,12 @@ export default function Hero() {
         </div>
 
         {/* Photo + animated terminal. To change the photo, replace
-            public/arijit.jpg (next/image applies basePath itself). */}
+            public/arijit.jpg. basePath is prepended manually below —
+            next/image's automatic basePath rewrite doesn't apply here
+            because images.unoptimized is required for static export. */}
         <div className="flex flex-col items-center gap-6 lg:items-end">
           <Image
-            src="/arijit.jpg"
+            src={`${basePath}/arijit.jpg`}
             alt="Portrait of Arijit Paul"
             width={176}
             height={176}
