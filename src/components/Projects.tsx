@@ -38,15 +38,27 @@ export default function Projects() {
                 ))}
               </ul>
 
-              {/* Repo link — placeholder URL, update in src/data/projects.ts */}
-              <a
-                href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex min-h-11 items-center border-t border-edge pt-3 text-sm text-accent hover:underline"
-              >
-                <span className="break-all">$ git clone {repoSlug}</span>
-              </a>
+              {/* Repo link, plus a live demo when the project has one */}
+              <div className="mt-5 flex flex-wrap items-center gap-x-5 border-t border-edge pt-3">
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-11 items-center text-sm text-accent hover:underline"
+                >
+                  <span className="break-all">$ git clone {repoSlug}</span>
+                </a>
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center text-sm text-muted hover:text-accent hover:underline"
+                  >
+                    live demo <span aria-hidden="true">&nbsp;↗</span>
+                  </a>
+                )}
+              </div>
             </article>
           );
         })}

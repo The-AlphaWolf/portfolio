@@ -6,6 +6,8 @@ export interface Project {
   tags: string[];
   /** Public GitHub repository for the project. */
   repo: string;
+  /** Optional deployed/live version, rendered next to the repo link. */
+  live?: string;
 }
 
 export const projects: Project[] = [
@@ -50,5 +52,47 @@ export const projects: Project[] = [
     ],
     tags: ["MATLAB", "RIS", "5G", "Reinforcement Learning", "MIMO"],
     repo: "https://github.com/The-AlphaWolf/RIS-SNR-Gain-Comparison",
+  },
+  {
+    title: "FlowSuite — Offline Voice-to-Text & Voice-to-Code Engine",
+    period: "Jul 2026",
+    bullets: [
+      "Local speech engine with three hotkeys: dictate prose, or speak Python/C++ that is turned into real syntax at the cursor in any app.",
+      "Spoken-language-to-syntax translation, e.g. \"for i in range n\" becomes a valid Python for-loop.",
+      "Runs fully offline on faster-whisper — no cloud, account, or telemetry — across Windows, macOS and Linux, with optional NVIDIA GPU acceleration.",
+      "Ships a doctor.py preflight check that validates mic, clipboard, hotkey and GPU setup per platform.",
+    ],
+    tags: ["Python", "faster-whisper", "Speech Recognition", "Cross-platform"],
+    repo: "https://github.com/The-AlphaWolf/FlowSuite",
+  },
+  {
+    title: "ANTG1 — Browser RPG",
+    period: "Jul 2026",
+    bullets: [
+      "Full-stack browser role-playing game with combat, crafting, trading, exploration, quests, talent trees and vehicle progression.",
+      "Next.js 16 + TypeScript app with PostgreSQL via Prisma, NextAuth sessions, and Zod-validated server actions.",
+      "Tailwind CSS and shadcn/ui front end; Vitest test suite, Dockerised local stack, and Vercel deployment.",
+    ],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Vitest",
+      "Docker",
+    ],
+    repo: "https://github.com/The-AlphaWolf/GAME-ANTG1",
+    live: "https://game-antg1.vercel.app",
+  },
+  {
+    title: "FORM LAB — Studio Landing Site",
+    period: "Jul 2026",
+    bullets: [
+      "Landing site for a reformer pilates and strength studio — manifesto, classes, method, coaches, pricing and booking sections.",
+      "Hand-written static HTML/CSS in a single file, no framework or build step.",
+    ],
+    tags: ["HTML", "CSS", "Responsive Design"],
+    repo: "https://github.com/The-AlphaWolf/formlab",
   },
 ];
