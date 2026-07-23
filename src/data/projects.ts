@@ -4,7 +4,7 @@ export interface Project {
   period: string;
   bullets: string[];
   tags: string[];
-  /** TODO: point each of these at the real repository when available. */
+  /** Public GitHub repository for the project. */
   repo: string;
 }
 
@@ -13,12 +13,19 @@ export const projects: Project[] = [
     title: "AI-Based Personal Style & Body Analysis System",
     period: "Jan 2026 – Present",
     bullets: [
-      "AI-powered web app that analyzes facial structure, skin tone, and body proportions to suggest personalized fashion and styling recommendations.",
-      "CNN-based computer vision models for face shape detection and skin tone classification.",
-      "React frontend integrated with a Flask backend for real-time image processing.",
+      "AI-powered web app that analyzes facial structure, skin tone, and body proportions from a single photo to suggest personalized fashion and styling recommendations.",
+      "Face shape detection via MediaPipe Face Mesh, skin tone classification via LAB-space k-means, and body proportions via pose estimation.",
+      "React frontend integrated with a Flask backend and PostgreSQL for real-time image processing and result storage.",
     ],
-    tags: ["Python", "CNN", "Computer Vision", "React", "Flask"],
-    repo: "https://github.com/The-AlphaWolf",
+    tags: [
+      "Python",
+      "MediaPipe",
+      "Computer Vision",
+      "React",
+      "Flask",
+      "PostgreSQL",
+    ],
+    repo: "https://github.com/The-AlphaWolf/AI-Driven-body-analysis",
   },
   {
     title: "Smart Restaurant Food Demand Prediction System",
@@ -30,7 +37,7 @@ export const projects: Project[] = [
       "Improved accuracy through feature engineering and hyperparameter tuning.",
     ],
     tags: ["Python", "Machine Learning", "Streamlit", "Time-Series Forecasting"],
-    repo: "https://github.com/The-AlphaWolf",
+    repo: "https://github.com/The-AlphaWolf/Restaurent-management",
   },
   {
     title: "AI-Enabled Joint Beamforming in Wireless Networks",

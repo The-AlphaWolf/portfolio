@@ -12,6 +12,21 @@
  */
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
+/**
+ * Origin of the deployed site. Used as Next's `metadataBase`, which resolves
+ * file-based metadata (opengraph-image.png) — those already carry `basePath`,
+ * so the origin must NOT include it or the URL would repeat the sub-path.
+ */
+export const siteOrigin = "https://the-alphawolf.github.io";
+
+/**
+ * Full canonical URL of the deployed site, used for the canonical link,
+ * og:url, sitemap and robots. Hardcoded to production on purpose — it must
+ * not follow the local basePath, or a local build would write dev URLs into
+ * the sitemap.
+ */
+export const siteUrl = `${siteOrigin}/portfolio`;
+
 export const site = {
   name: "Arijit Paul",
   location: "Kolkata, West Bengal",
@@ -43,7 +58,7 @@ export const heroTerminal = [
 
 /** About section — rendered as the output of `$ cat about.md`. */
 export const aboutParagraphs = [
-  "I'm a third-year Electronics & Telecommunication Engineering undergrad at Jadavpur University (Class of 2027), with a 94%+ record in both board exams and a habit of chasing problems across the stack — from RF link budgets to REST APIs.",
+  "I'm a final-year Electronics & Telecommunication Engineering undergrad at Jadavpur University (Class of 2027), with a 94%+ record in both board exams and a habit of chasing problems across the stack — from RF link budgets to REST APIs.",
   "My experience spans enterprise networking at Accenture and 5G research at IIT Guwahati, where I worked on joint active/passive beamforming for RIS-aided integrated sensing and communication systems.",
   "On the applied ML side, I've built CNN-powered computer-vision apps, time-series demand forecasting dashboards, and reinforcement-learning models that tune beamforming in simulated wireless networks.",
   "I'm currently looking for internship and full-time opportunities at the intersection of wireless systems and machine learning.",

@@ -75,12 +75,11 @@ All copy and links live in `src/data/` — components don't hardcode content:
 
 | File | Contains |
 | --- | --- |
-| `src/data/site.ts` | Name, tagline, email/phone, GitHub/LinkedIn URLs, **Formspree endpoint**, about bio, hero terminal lines |
+| `src/data/site.ts` | Name, tagline, email/phone, GitHub/LinkedIn URLs, **Formspree endpoint**, canonical site URL, about bio, hero terminal lines |
 | `src/data/experience.ts` | Experience timeline entries |
-| `src/data/projects.ts` | Project cards (update the placeholder `repo` URLs) |
+| `src/data/projects.ts` | Project cards + their repo URLs |
 | `src/data/skills.ts` | Skill groups |
 | `src/data/education.ts` | Education entries |
-| `src/data/posts.ts` | **Placeholder blog posts** — swap in real ones here |
 
 Other common tweaks:
 
@@ -91,13 +90,26 @@ Other common tweaks:
 - **Resume**: replace `public/resume.pdf`.
 - **Theme colors**: design tokens in `src/app/globals.css` (`@theme` block).
 
+## SEO
+
+- Canonical URL, Open Graph, Twitter card and JSON-LD `Person` schema are set
+  in [src/app/layout.tsx](src/app/layout.tsx). The deployed URL lives in
+  `siteOrigin` / `siteUrl` in `src/data/site.ts` — **change these if the repo
+  or username changes.**
+- `src/app/opengraph-image.png` is the 1200×630 social preview card
+  (alt text in `opengraph-image.alt.txt`).
+- `src/app/sitemap.ts` and `src/app/robots.ts` emit `/sitemap.xml` and
+  `/robots.txt`. Both need `export const dynamic = "force-static"` — metadata
+  routes fail the build under `output: "export"` without it.
+
 ## Structure
 
 ```
 src/
-  app/         layout (metadata, font), page (section order), globals.css, icon.svg
+  app/         layout (metadata + JSON-LD, font), page (section order),
+               globals.css, icon.svg, opengraph-image.png, sitemap.ts, robots.ts
   components/  Nav, Hero, About, Experience, Projects, Skills,
-               Education, Blog, Contact, Footer + shared Section/Reveal/TypingTerminal
+               Education, Contact, Footer + shared Section/Reveal/TypingTerminal
   data/        all content (see table above)
-public/        resume.pdf, .nojekyll
+public/        resume.pdf, arijit.jpg, .nojekyll
 ```

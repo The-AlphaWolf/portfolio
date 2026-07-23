@@ -10,7 +10,7 @@ export const education: EducationEntry[] = [
   {
     school: "Jadavpur University",
     credential: "B.Tech — Electronics and Telecommunication Engineering",
-    detail: "Currently 3rd Year, 6th Semester",
+    detail: "Final Year — 7th Semester",
     period: "2023 – 2027",
   },
   {
