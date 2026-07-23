@@ -10,7 +10,52 @@ export interface Project {
   live?: string;
 }
 
+/** Ordered deliberately — strongest work first, not by date. */
 export const projects: Project[] = [
+  {
+    title: "AI-Enabled Joint Beamforming in Wireless Networks",
+    period: "Nov 2025 – Present",
+    bullets: [
+      "Simulated a RIS-enabled multi-user MIMO beamforming system at 28 GHz in MATLAB.",
+      "Analyzed and visualized SNR improvements via charts and heatmaps for optimal RIS deployment.",
+      "Reinforcement Learning model to boost signal strength and reduce blackout zones in the propagation model.",
+      "Done under the guidance of Prof. Iti Saha Misra.",
+    ],
+    tags: ["MATLAB", "RIS", "5G", "Reinforcement Learning", "MIMO"],
+    repo: "https://github.com/The-AlphaWolf/RIS-SNR-Gain-Comparison",
+  },
+  {
+    title: "FlowSuite — Offline Voice-to-Text & Voice-to-Code Engine",
+    period: "Jul 2026",
+    bullets: [
+      "Local speech engine with three hotkeys: dictate prose, or speak Python/C++ that is turned into real syntax at the cursor in any app.",
+      'Spoken-language-to-syntax translation, e.g. "for i in range n" becomes a valid Python for-loop.',
+      "Runs fully offline on faster-whisper — no cloud, account, or telemetry — across Windows, macOS and Linux, with optional NVIDIA GPU acceleration.",
+      "Ships a doctor.py preflight check that validates mic, clipboard, hotkey and GPU setup per platform.",
+    ],
+    tags: ["Python", "faster-whisper", "Speech Recognition", "Cross-platform"],
+    repo: "https://github.com/The-AlphaWolf/FlowSuite",
+  },
+  {
+    title: "ANTG1 — Browser RPG",
+    period: "Jul 2026",
+    bullets: [
+      "Full-stack browser role-playing game with combat, crafting, trading, exploration, quests, talent trees and vehicle progression.",
+      "Next.js 16 + TypeScript app with PostgreSQL via Prisma, NextAuth sessions, and Zod-validated server actions.",
+      "Tailwind CSS and shadcn/ui front end; Vitest test suite, Dockerised local stack, and Vercel deployment.",
+    ],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Vitest",
+      "Docker",
+    ],
+    repo: "https://github.com/The-AlphaWolf/GAME-ANTG1",
+    live: "https://game-antg1.vercel.app",
+  },
   {
     title: "AI-Based Personal Style & Body Analysis System",
     period: "Jan 2026 – Present",
@@ -40,59 +85,5 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "Machine Learning", "Streamlit", "Time-Series Forecasting"],
     repo: "https://github.com/The-AlphaWolf/Restaurent-management",
-  },
-  {
-    title: "AI-Enabled Joint Beamforming in Wireless Networks",
-    period: "Nov 2025 – Present",
-    bullets: [
-      "Simulated a RIS-enabled multi-user MIMO beamforming system at 28 GHz in MATLAB.",
-      "Analyzed and visualized SNR improvements via charts and heatmaps for optimal RIS deployment.",
-      "Reinforcement Learning model to boost signal strength and reduce blackout zones in the propagation model.",
-      "Done under the guidance of Prof. Iti Saha Misra.",
-    ],
-    tags: ["MATLAB", "RIS", "5G", "Reinforcement Learning", "MIMO"],
-    repo: "https://github.com/The-AlphaWolf/RIS-SNR-Gain-Comparison",
-  },
-  {
-    title: "FlowSuite — Offline Voice-to-Text & Voice-to-Code Engine",
-    period: "Jul 2026",
-    bullets: [
-      "Local speech engine with three hotkeys: dictate prose, or speak Python/C++ that is turned into real syntax at the cursor in any app.",
-      "Spoken-language-to-syntax translation, e.g. \"for i in range n\" becomes a valid Python for-loop.",
-      "Runs fully offline on faster-whisper — no cloud, account, or telemetry — across Windows, macOS and Linux, with optional NVIDIA GPU acceleration.",
-      "Ships a doctor.py preflight check that validates mic, clipboard, hotkey and GPU setup per platform.",
-    ],
-    tags: ["Python", "faster-whisper", "Speech Recognition", "Cross-platform"],
-    repo: "https://github.com/The-AlphaWolf/FlowSuite",
-  },
-  {
-    title: "ANTG1 — Browser RPG",
-    period: "Jul 2026",
-    bullets: [
-      "Full-stack browser role-playing game with combat, crafting, trading, exploration, quests, talent trees and vehicle progression.",
-      "Next.js 16 + TypeScript app with PostgreSQL via Prisma, NextAuth sessions, and Zod-validated server actions.",
-      "Tailwind CSS and shadcn/ui front end; Vitest test suite, Dockerised local stack, and Vercel deployment.",
-    ],
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "Tailwind CSS",
-      "Vitest",
-      "Docker",
-    ],
-    repo: "https://github.com/The-AlphaWolf/GAME-ANTG1",
-    live: "https://game-antg1.vercel.app",
-  },
-  {
-    title: "FORM LAB — Studio Landing Site",
-    period: "Jul 2026",
-    bullets: [
-      "Landing site for a reformer pilates and strength studio — manifesto, classes, method, coaches, pricing and booking sections.",
-      "Hand-written static HTML/CSS in a single file, no framework or build step.",
-    ],
-    tags: ["HTML", "CSS", "Responsive Design"],
-    repo: "https://github.com/The-AlphaWolf/formlab",
   },
 ];
