@@ -38,7 +38,7 @@ export default function Projects() {
                 ))}
               </ul>
 
-              {/* Repo link, plus a live demo when the project has one */}
+              {/* Repo link, plus a demo/download link when the project has one */}
               <div className="mt-5 flex flex-wrap items-center gap-x-5 border-t border-edge pt-3">
                 <a
                   href={project.repo}
@@ -55,7 +55,8 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="inline-flex min-h-11 items-center text-sm text-muted hover:text-accent hover:underline"
                   >
-                    live demo <span aria-hidden="true">&nbsp;↗</span>
+                    {project.liveLabel ?? "live demo"}{" "}
+                    <span aria-hidden="true">↗</span>
                   </a>
                 )}
               </div>

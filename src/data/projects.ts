@@ -6,8 +6,13 @@ export interface Project {
   tags: string[];
   /** Public GitHub repository for the project. */
   repo: string;
-  /** Optional deployed/live version, rendered next to the repo link. */
+  /**
+   * Optional second link rendered next to the repo link — a deployed demo,
+   * a download page, whatever the project actually has.
+   */
   live?: string;
+  /** Link text for `live`. Defaults to "live demo". */
+  liveLabel?: string;
 }
 
 /** Ordered deliberately — strongest work first, not by date. */
@@ -35,6 +40,8 @@ export const projects: Project[] = [
     ],
     tags: ["Python", "faster-whisper", "Speech Recognition", "Cross-platform"],
     repo: "https://github.com/The-AlphaWolf/FlowSuite",
+    live: "https://github.com/The-AlphaWolf/FlowSuite/releases",
+    liveLabel: "download v0.1.0",
   },
   {
     title: "ANTG1 — Browser RPG",
