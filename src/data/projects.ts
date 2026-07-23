@@ -30,6 +30,30 @@ export const projects: Project[] = [
     repo: "https://github.com/The-AlphaWolf/RIS-SNR-Gain-Comparison",
   },
   {
+    title: "CodeNSliceR — 5G Packet-Classifier Puzzle Game",
+    period: "Jul 2026",
+    bullets: [
+      "Terminal puzzle game in the spirit of Human Resource Machine, where the machine is a 5G packet classifier: write assembly with bit-manipulation instructions, decode a 32-bit packet header, and route traffic into eMBB, URLLC, mMTC and V2X slices.",
+      "Built the full toolchain in TypeScript — ISA table, assembler, virtual machine with eight registers and sixteen RAM cells, execution trace and a par-based grading system scoring both instruction count and retired cycles.",
+      "Fifteen levels from a single-slice emit to a nine-rule production policy with tenant carve-outs, DiffServ trust and admission limits; every reference solution runs in CI as the test that proves the level is solvable at its advertised par.",
+      "Real 3GPP semantics throughout — SST, 5QI, DSCP, ARP priority and S-NSSAI structure — with an in-game codex documenting exactly where the game simplifies the specs.",
+      "React + Vite front end with a three-pane terminal shell, a custom Monaco language for the assembly, Zustand state and localStorage progress with export/import.",
+    ],
+    tags: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Monaco Editor",
+      "Zustand",
+      "Vitest",
+      "5G",
+      "Compilers",
+    ],
+    repo: "https://github.com/The-AlphaWolf/CodeNSliceR",
+    live: "https://codenslicer.vercel.app",
+    liveLabel: "play it",
+  },
+  {
     title: "FlowSuite — Offline Voice-to-Text & Voice-to-Code Engine",
     period: "Jul 2026",
     bullets: [
