@@ -33,9 +33,9 @@ export const site = {
   // Short identity line shown under the name in the hero
   tagline:
     "Electronics & Telecommunication Engineer | 5G/Wireless Research | ML Enthusiast",
-  email: "arijit.01paul@gmail.com",
-  phone: "+91-9123600332",
-  phoneHref: "tel:+919123600332",
+  email: "dequnuch@gmail.com",
+  phone: "+91-9433769223",
+  phoneHref: "tel:+919433769223",
   github: "https://github.com/The-AlphaWolf",
   linkedin: "https://www.linkedin.com/in/arijit-paul-ju/",
   // Served from public/resume.pdf — replace that file to update the resume.
